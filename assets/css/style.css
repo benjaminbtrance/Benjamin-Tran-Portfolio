@@ -22,7 +22,7 @@ body {
 
 .hero-content {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	width: 100%;
 	max-width: 100;
 }
@@ -46,4 +46,52 @@ body {
 	color: #fff;
 	word-spacing: 5px;
 	letter-spacing: 2px;
+}
+
+/* Media Query */
+@media screen and (max-width: 767px) {
+
+	.hero-content {
+		top: 30%;
+	}
+	
+	.navbar {
+		letter-spacing: 0.1rem;
+		padding: 10px 0;
+	}
+	
+	.hero-content h2 {
+		font-size: 3em;
+	}
+	
+	.hero-content h1 {
+		font-size: 3em;
+	}
+	
+	.hero-content p {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.hero-content {
+		top: 20%;
+	}
+
+	.navbar {
+		letter-spacing: 0.1rem;
+		padding: 7px 0;
+	}
+	
+	.hero-content h2 {
+		font-size: 2em;
+	}
+	
+	.hero-content h1 {
+		font-size: 2em;
+	}
+	
+	.hero-content p {
+		font-size: 0.7em;
+	}
 }
