@@ -1,97 +1,109 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
 
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
-/* Nav Bar */
-.navbar {
-	text-transform: uppercase;
-	font-size: 16px;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
-	padding: 20px 0;
+#mainNav {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	background-color: #fff;
+	transition: background-color 0.2s ease;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-	color: #fff;
-	padding-left: 20px;
+#mainNav .navbar-brand {
+	font-weight: 700;
+	color: #212529;
 }
 
-/* Hero */
-
-.hero-content {
-	position: absolute;
-	top: 40%;
-	width: 100%;
-	max-width: 100;
+#mainNav .navbar-nav .nav-item .nav-link {
+	color: #6c757d;
+	font-weight: 700;
+	font-size: 0.9rem;
+	padding: 0.75rem 0;
 }
 
-.hero-content h2 {
-	font-size: 4em;
-	font-weight: 500;
-	color: #fff;
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:active {
+	color: #0d6efd;
 }
 
-.hero-content h1 {
-	font-size: 5em;
-	font-weight: 500;
-	color: #fff;
+#mainNav .navbar-nav .nav-item .nav-link.active {
+	color: #0d6efd !important;
 }
 
-.hero-content p {
-	font-size: 1em;
-	font-weight: 500;
-	text-transform: uppercase;
-	color: #fff;
-	word-spacing: 5px;
-	letter-spacing: 2px;
-}
-
-/* Media Query */
-@media screen and (max-width: 767px) {
-
-	.hero-content {
-		top: 30%;
+@media (min-width: 992px) {
+	#mainNav {
+		box-shadow: none;
+		background-color: transparent;
 	}
-	
-	.navbar {
-		letter-spacing: 0.1rem;
-		padding: 10px 0;
+	#mainNav .navbar-brand {
+		color: rgba(255, 255, 255, 0.7);
 	}
-	
-	.hero-content h2 {
-		font-size: 3em;
+	#mainNav .navbar-brand:hover {
+		color: #fff;
 	}
-	
-	.hero-content h1 {
-		font-size: 3em;
+	#mainNav .navbar-nav .nav-item .nav-link {
+		color: rgba(255, 255, 255, 0.7);
+		padding: 0 1rem;
 	}
-	
-	.hero-content p {
-		font-size: 0.9em;
+	#mainNav .navbar-nav .nav-item .nav-link:hover {
+		color: #fff;
+	}
+	#mainNav .navbar-nav .nav-item:last-child .nav-link {
+		padding-right: 0;
+	}
+	#mainNav.navbar-shrink {
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+		background-color: #fff;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		color: #212529;
+	}
+	#mainNav.navbar-shrink .navbar-brand:hover {
+		color: #0d6efd;
+	}
+	#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+		color: #212529;
+	}
+	#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+		color: #0d6efd;
 	}
 }
 
-@media screen and (max-width: 479px) {
-	.hero-content {
-		top: 20%;
-	}
+header.masthead {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - 4.5rem);
+	background: url('../images/benny2.JPG');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
 
-	.navbar {
-		letter-spacing: 0.1rem;
-		padding: 7px 0;
+header.masthead h1,
+header.masthead .h1 {
+	font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+	header.masthead {
+		height: 100vh;
+		min-height: 40rem;
+		padding-top: 4.5rem;
+		padding-bottom: 0;
 	}
-	
-	.hero-content h2 {
-		font-size: 2em;
+	header.masthead p {
+		font-size: 1.15rem;
 	}
-	
-	.hero-content h1 {
-		font-size: 2em;
+	header.masthead h1,
+	header.masthead .h1 {
+		font-size: 3rem;
 	}
-	
-	.hero-content p {
-		font-size: 0.7em;
+}
+
+@media (min-width: 1200px) {
+	header.masthead h1,
+	header.masthead .h1 {
+		font-size: 3.5rem;
 	}
 }
